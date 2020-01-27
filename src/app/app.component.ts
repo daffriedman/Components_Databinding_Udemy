@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'componentsAndDatabindingDeepDive';
+ serverElements = [{type:'server', name:'testserver', content:'just a test from the app-root'}];
+  
+  
 }
