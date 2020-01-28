@@ -9,7 +9,10 @@ export class CockpitComponent implements OnInit {
   //add the decorator and output() in order to send the data
   //out i.e emit it
  // you can add alias's just like by input's
-  @Output() serverCreated= new EventEmitter<{serverName:string, serverContent:string}>();
+ //used viewchild @ViewChild('serverContentInput) serverContentInput: ElementRef;
+ //to get access to the the reference from the html
+ //it will be a elmentref not a local ref get direct access to the DOM  
+ @Output() serverCreated= new EventEmitter<{serverName:string, serverContent:string}>();
   @Output()bluePrintCreated = new EventEmitter<{serverName:string, serverContent:string}>();
   newServerName = '';
   newServerContent = '';

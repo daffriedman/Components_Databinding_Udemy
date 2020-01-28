@@ -3,9 +3,8 @@
         class="panel panel-default">
         <div class="panel-heading">{{ element.name }}</div>
         <div class="panel-body">
-          <p>
-            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
-            <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-          </p>
+          <!-- added a ng content which is a directive that serves as a hook 
+          to place in the component that marks to angular to place code -->
+          <ng-content></ng-content>
         </div>
       </div>
