@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, OnChanges,DoCheck, AfterContentInit } from '@angular/core';
 //added here encapsulation:ViewEncapsulation
 // I didn't add it it will allow css 
 //applied here to be global if set to none
@@ -15,9 +15,26 @@ export class ServerElementComponent implements OnInit {
  // @Input()element: {type:string, name:string, content:string };
 //assigning a alias
 @Input('srvElement')element: {type:string, name:string, content:string };  
-  constructor() { }
+  constructor() { 
+    console.log("constructor called");
+    
+  }
 
   ngOnInit() {
+    console.log("ngonit called");
+    
+  }
+  ngOnChanges(){
+console.log("ngonchanges called");
+
+  }
+  ngDoCheck(){
+    console.log("calling the ngdocheck");
+    
+  }
+  ngAfterContentInit(){
+    console.log("using th afterinit");
+    
   }
 
 }
